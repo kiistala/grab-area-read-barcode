@@ -18,5 +18,5 @@ then
   BARCODE=$(cat /tmp/barcode.txt | cut -d: -f2)
   echo $BARCODE | xclip -selection c
 else
-  snd_error
+  echo "Barcode detection or screen capture failed" && exit
 fi
